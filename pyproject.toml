@@ -1,0 +1,31 @@
+[project]
+name = "ai-engineering"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Viktor", email = "vileb.dev@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "google-genai>=2.25.0",
+    "groq>=1.7.0",
+    "ipykernel>=7.3.0",
+    "ollama>=0.6.2",
+    "openai>=3.20.0",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+    "python-dotenv>=1.2.3",
+    "streamlit>=1.64.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "apps/api",
+    "apps/chatbot_ui",
+]
+
+[dependency-groups]
+dev = [
+    "nbconvert>=7.17.1",
+]
